@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="circulo"></div>
+    <div>
+        <img src="./Imagens/logo.png" alt="image-logo" class= "logo">
+    </div>
+    <main class="conteudo">
+        <section class="caixa-texto">
+            <h1>It's not just Coffee<br>
+                It' <span>Starbucks</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sapiente recusandae voluptas qui, ipsum,
+                fugit, facilis eius numquam laboriosam fugiat totam iure delectus veniam iste quia repellat odio officia
+                consequatur!</p>
+            <button>Deixe o seu like!</button>
+        </section>
+        <section class="caixa-imagem">
+            <img src="./Imagens/img1.png" alt="img1-logo" class= "starbucks">
+        </section>
+    </main>
+    <div class="menu">
+        <img src="./Imagens/thumb1.png" alt="thumb1-logo" class="botao-menu" onclick="trocaImagem('./Imagens/img1.png'); trocaCor('#017143')">
+        <img src="./Imagens/thumb2.png" alt="thumb2-logo" class="botao-menu" onclick="trocaImagem('./Imagens/img2.png'); trocaCor('#eb7495')">
+        <img src="./Imagens/thumb3.png" alt="thumb3-logo" class="botao-menu" onclick="trocaImagem('./Imagens/img3.png'); trocaCor('#d752b1')">
+    </div>
+</body>
+
+<script>
+    let imagem = document.querySelector (".starbucks")
+    let circulo = document.querySelector (".circulo")
+    
+    function trocaImagem (endereco) {
+        imagem.src = endereco
+    }
+
+    function trocaCor (cor) {
+        circulo.style.background = cor
+    }
+</script>
+
+</html>
